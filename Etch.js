@@ -1,23 +1,29 @@
 
 const containe = document.querySelector("div")
 
-function range(range)
+function range(range = 16)
 {
  for(i = 0; i < (range * range ) ; i++)
  {
   const div = document.createElement("div")
-  div.innerText = i
+
   div.id = "item"
-  div.style.width = 750/range  + "px"
-  div.style.height = 750/range + "px"
-  
-  
+  div.style.width = 960/range  + "px"
+  div.style.height = 960/range + "px"
   containe.appendChild(div)
+  
+  div.addEventListener("mouseover", function changeColor()
+  {
+    div.style.backgroundColor = "black"
+
+
+  })
 
  }
 
 
 }
 
-range(16)
+
+range()
 

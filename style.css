@@ -10,8 +10,8 @@ body{
 {
  display: flex;
  
- width: 750px;
- height: 750px;
+ width: 960px;
+ height: 960px;
  flex-wrap: wrap;
  border: 1px solid red;
  position: relative;
@@ -23,7 +23,5 @@ body{
   flex: none;
   
   
- 
-
 
 }
