@@ -1,6 +1,7 @@
 
-const containe = document.querySelector("div")
-
+const containe = document.getElementById("container")
+const OtherC = document.getElementById("OtherC")
+let x = null
 function range(range = 16)
 {
  for(i = 0; i < (range * range ) ; i++)
@@ -24,6 +25,32 @@ function range(range = 16)
 
 }
 
+const btn = document.createElement("button")
+btn.style.width = "200px"
+btn.style.height = "200px"
+btn.innerText = "Reset"
+btn.style.fontSize = "45px"
+OtherC.appendChild(btn)
+
 
 range()
+btn.addEventListener("click", function clearAdd()
+{
+  while (containe.firstChild)
+    {
+    containe.firstChild.remove()
+    }
+  let input = window.prompt("what size?" , "16")
+  while (containe.firstChild)
+  {
+  containe.firstChild.remove()
+  }
+
+  range(input)
+})
+
+
+
+
+
 
