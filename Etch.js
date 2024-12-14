@@ -2,6 +2,13 @@
 const containe = document.getElementById("container")
 const OtherC = document.getElementById("OtherC")
 let x = null
+const setBg = () => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  
+  let color = "#" + randomColor;
+  return color
+}
+
 function range(range = 16)
 {
  for(i = 0; i < (range * range ) ; i++)
@@ -15,7 +22,7 @@ function range(range = 16)
   
   div.addEventListener("mouseover", function changeColor()
   {
-    div.style.backgroundColor = "black"
+    div.style.backgroundColor = setBg()
 
 
   })
